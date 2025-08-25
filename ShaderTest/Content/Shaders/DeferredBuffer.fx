@@ -18,7 +18,7 @@ float NearClip;
 float FarClip;
 
 Texture2D<float3> Texture : register(t0);
-SamplerState TextureSampler : register(s0) = sampler_state
+SamplerState TextureSampler : register(s0)
 {
     Texture = (Texture);
     Filter = Anisotropic;
@@ -28,14 +28,14 @@ SamplerState TextureSampler : register(s0) = sampler_state
 };
 
 Texture2D<float3> PbrMap : register(t1);
-SamplerState PbrMapSampler : register(s1) = sampler_state
+SamplerState PbrMapSampler : register(s1)
 {
     Texture = (PbrMap);
     Filter = None;
 };
 
 Texture2D<float3> NormalMap : register(t2);
-SamplerState NormalMapSampler : register(s2) = sampler_state
+SamplerState NormalMapSampler : register(s2)
 {
     Texture = (NormalMap);
     Filter = None;
@@ -65,7 +65,7 @@ struct PSOutput
 {
     float4 Albedo : SV_Target0;
     float4 Normal : SV_Target1;
-    float4 Depth : SV_Target2;
+    float Depth : SV_Target2;
     float4 Pbr : SV_Target3;
 };
 
@@ -128,19 +128,33 @@ PSOutput PShader(V2P input)
     return output;
 };
 
-float4 VShaderClear(float4 position : SV_Position) : SV_Position
+struct VertexShaderClear
 {
-    return position;
+    float4 Position : POSITION;
+};
+
+struct PixelShaderClear
+{
+    float4 Position : SV_Position;
+};
+
+PixelShaderClear VShaderClear(VertexShaderClear input)
+{
+    PixelShaderClear output;
+    
+    output.Position = input.Position;
+    
+    return output;
 }
 
-PSOutput PShaderClear(float4 position : SV_Position)
+PSOutput PShaderClear(PixelShaderClear input)
 {
     PSOutput output;
     
-    output.Albedo = 0.0f;
-    output.Normal = 0.0f;
+    output.Albedo = float4(0.0f.xxx, 1.0f);
+    output.Normal = float4(0.0f.xxx, 1.0f);
     output.Depth = 1.0f;
-    output.Pbr = 0.0f;
+    output.Pbr = float4(0.0f.xxx, 1.0f);
     
     return output;
 }

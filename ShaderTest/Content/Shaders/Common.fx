@@ -12,8 +12,8 @@
 
 static const float Pi = 3.14159265f;
 
-Texture2D<float> ShadowMap : register(t15);
-SamplerState ShadowMapSampler : register(s15) = sampler_state
+Texture2D<float> ShadowMap : register(t4);
+SamplerState ShadowMapSampler : register(s4) = sampler_state
 {
     Texture = (ShadowMap);
     Filter = None;

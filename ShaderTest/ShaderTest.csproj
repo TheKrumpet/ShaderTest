@@ -50,6 +50,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\McFace.MonoGame\McFace.MonoGame.ImGui\McFace.MonoGame.ImGuiNET.csproj" />
     <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Native.csproj" />
     <ProjectReference Include="..\..\MonoGame\native\monogame\desktopvk.vcxproj">
       <Private>True</Private>

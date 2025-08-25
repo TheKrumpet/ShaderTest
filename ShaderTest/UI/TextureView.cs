@@ -1,5 +1,5 @@
 ﻿using ImGuiNET;
-using MonoGame.ImGuiNet;
+using McFace.MonoGame.ImGuiNET;
 
 namespace ShaderTest.UI
 {

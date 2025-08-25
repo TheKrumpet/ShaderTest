@@ -13,6 +13,7 @@
         {
             input.Translation = Vector3.Zero;
             return Matrix.Transpose(Matrix.Invert(input));
+
         }
     }
 }

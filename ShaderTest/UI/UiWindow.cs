@@ -1,5 +1,5 @@
 ﻿using ImGuiNET;
-using MonoGame.ImGuiNet;
+using McFace.MonoGame.ImGuiNET;
 
 namespace ShaderTest.UI
 {
@@ -29,7 +29,7 @@ namespace ShaderTest.UI
 
         public void RenderUi(GameTime gameTime)
         {
-            Renderer.BeginLayout(gameTime);
+            Renderer.BeforeLayout(gameTime);
 
             ImGui.Begin("Debug");
 
@@ -56,7 +56,7 @@ namespace ShaderTest.UI
 
             ImGui.End();
 
-            Renderer.EndLayout();
+            Renderer.AfterLayout();
         }
     }
 }

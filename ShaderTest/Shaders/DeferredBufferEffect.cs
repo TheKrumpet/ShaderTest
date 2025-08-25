@@ -68,7 +68,6 @@ namespace ShaderTest.Shaders
 
         public override void ApplyRenderContext(Matrix world, RenderContext renderContext, Material material)
         {
-
             UseTexture = material.UseTexture;
             Texture = material.Texture;
             UseNormalMap = material.UseNormalMap;

@@ -4,7 +4,7 @@ namespace ShaderTest.Shaders
 {
     public static class GameShaders
     {
-        public static void Initialise(ContentManager content)
+        public static void Initialise(GraphicsDevice graphicsDevice, ContentManager content)
         {
             Pbr = new PbrEffect(content.Load<Effect>("Shaders/PBRTechniques"))
             {
@@ -24,17 +24,32 @@ namespace ShaderTest.Shaders
             };
             ShadowMap.CurrentTechnique = ShadowMap.Techniques["RenderDepth"];
 
-            PbrDeferred = new PbrDeferredEffect(content.Load<Effect>("Shaders/PbrDeferred"))
+            PbrDeferred = new PbrDeferredEffect(content.Load<Effect>("Shaders/PBRDeferred"))
             {
                 Name = "PBR Deferred"
             };
-            PbrDeferred.CurrentTechnique = PbrDeferred.Techniques["Draw"];
+            PbrDeferred.CurrentTechnique = PbrDeferred.Techniques["DrawAlbedo"];
 
             Atmosphere = new AtmosphereEffect(content.Load<Effect>("Shaders/Atmosphere"))
             {
                 Name = "Atmosphere"
             };
             Atmosphere.CurrentTechnique = Atmosphere.Techniques["Draw"];
+
+            var effect = new BasicEffect(graphicsDevice)
+            {
+                TextureEnabled = true,
+                DiffuseColor = Color.White.ToVector3(),
+                AmbientLightColor = Color.White.ToVector3()
+            };
+
+            effect.EnableDefaultLighting();
+
+            BasicEffect = new BasicEffectEffect(effect)
+            {
+                Name = "BasicEffect"
+            };
+
         }
 
         public static PbrEffect Pbr { get; private set; }
@@ -42,5 +57,6 @@ namespace ShaderTest.Shaders
         public static ShadowMapEffect ShadowMap { get; private set; }
         public static PbrDeferredEffect PbrDeferred { get; private set; }
         public static AtmosphereEffect Atmosphere { get; private set; }
+        public static BasicEffectEffect BasicEffect { get; private set; }
     }
 }

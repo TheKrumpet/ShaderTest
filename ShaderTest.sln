@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "desktopvk", "..\MonoGame\na
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Framework.Native", "..\MonoGame\MonoGame.Framework\MonoGame.Framework.Native.csproj", "{6D048B93-116D-753C-2E33-48C193ECFE2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McFace.MonoGame.ImGuiNET", "..\McFace.MonoGame\McFace.MonoGame.ImGui\McFace.MonoGame.ImGuiNET.csproj", "{67B382F5-0435-2994-F6BA-51CF0FE1E7CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,14 @@ Global
 		{6D048B93-116D-753C-2E33-48C193ECFE2E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6D048B93-116D-753C-2E33-48C193ECFE2E}.Release|x64.ActiveCfg = Release|Any CPU
 		{6D048B93-116D-753C-2E33-48C193ECFE2E}.Release|x64.Build.0 = Release|Any CPU
+		{67B382F5-0435-2994-F6BA-51CF0FE1E7CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B382F5-0435-2994-F6BA-51CF0FE1E7CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B382F5-0435-2994-F6BA-51CF0FE1E7CE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{67B382F5-0435-2994-F6BA-51CF0FE1E7CE}.Debug|x64.Build.0 = Debug|Any CPU
+		{67B382F5-0435-2994-F6BA-51CF0FE1E7CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B382F5-0435-2994-F6BA-51CF0FE1E7CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B382F5-0435-2994-F6BA-51CF0FE1E7CE}.Release|x64.ActiveCfg = Release|Any CPU
+		{67B382F5-0435-2994-F6BA-51CF0FE1E7CE}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
