@@ -6,37 +6,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShaderTest.Shaders
+namespace ShaderTest.Shaders;
+
+public class RenderControl : IHasUi
 {
-    public class RenderControl : IHasUi
+    private bool _drawDeferred = false;
+    public bool DrawDeferred => _drawDeferred;
+
+    public string UiSectionName => "Shader";
+
+    public void RenderUi()
     {
-        private bool _drawDeferred = false;
-        public bool DrawDeferred => _drawDeferred;
+        ImGui.Checkbox("Deferred", ref _drawDeferred);
 
-        public string UiSectionName => "Shader";
+        BaseEffect effect = GameShaders.Pbr;
 
-        public void RenderUi()
+        if (_drawDeferred)
         {
-            ImGui.Checkbox("Deferred", ref _drawDeferred);
+            effect = GameShaders.PbrDeferred;
+        }
 
-            BaseEffect effect = GameShaders.Pbr;
-
-            if (_drawDeferred)
+        if (ImGui.BeginCombo("Technique", effect.CurrentTechnique.Name))
+        {
+            foreach (var technique in effect.Techniques)
             {
-                effect = GameShaders.PbrDeferred;
-            }
-
-            if (ImGui.BeginCombo("Technique", effect.CurrentTechnique.Name))
-            {
-                foreach (var technique in effect.Techniques)
+                if (ImGui.Selectable(technique.Name, effect.CurrentTechnique == technique))
                 {
-                    if (ImGui.Selectable(technique.Name, effect.CurrentTechnique == technique))
-                    {
-                        effect.CurrentTechnique = technique;
-                    }
+                    effect.CurrentTechnique = technique;
                 }
-                ImGui.EndCombo();
             }
+            ImGui.EndCombo();
         }
     }
 }

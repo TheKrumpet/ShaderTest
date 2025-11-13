@@ -1,0 +1,144 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.framework.content.pipeline\3.8.4.1\contentFiles\any\net8.0\mgfxc.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.basisu\1.60.0.3\build\..\binaries\linux-arm64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.crunch\1.0.4.5\build\..\binaries\linux-arm64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\linux-arm64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.basisu\1.60.0.3\build\..\binaries\linux-arm64\basisu" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.crunch\1.0.4.5\build\..\binaries\linux-arm64\crunch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\linux-arm64\lib\libdxcompiler.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\linux-arm64\bin\dxc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.basisu\1.60.0.3\build\..\binaries\linux-x64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.crunch\1.0.4.5\build\..\binaries\linux-x64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\linux-x64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffmpeg\7.0.0.9\build\..\binaries\linux-x64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffprobe\7.0.0.9\build\..\binaries\linux-x64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.basisu\1.60.0.3\build\..\binaries\linux-x64\basisu" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.crunch\1.0.4.5\build\..\binaries\linux-x64\crunch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\linux-x64\lib\libdxcompiler.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\linux-x64\bin\dxc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffmpeg\7.0.0.9\build\..\binaries\linux-x64\ffmpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffprobe\7.0.0.9\build\..\binaries\linux-x64\ffprobe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.basisu\1.60.0.3\build\..\binaries\osx\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.crunch\1.0.4.5\build\..\binaries\osx\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\osx\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffmpeg\7.0.0.9\build\..\binaries\osx\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffprobe\7.0.0.9\build\..\binaries\osx\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.basisu\1.60.0.3\build\..\binaries\osx\basisu" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.crunch\1.0.4.5\build\..\binaries\osx\crunch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\osx\lib\libdxcompiler.dylib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\osx\bin\dxc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffmpeg\7.0.0.9\build\..\binaries\osx\ffmpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffprobe\7.0.0.9\build\..\binaries\osx\ffprobe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.basisu\1.60.0.3\build\..\binaries\windows-x64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.crunch\1.0.4.5\build\..\binaries\windows-x64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\windows-x64\bin\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffmpeg\7.0.0.9\build\..\binaries\windows-x64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffprobe\7.0.0.9\build\..\binaries\windows-x64\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.basisu\1.60.0.3\build\..\binaries\windows-x64\basisu.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.crunch\1.0.4.5\build\..\binaries\windows-x64\crunch.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\windows-x64\bin\LICENSE-MS.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\windows-x64\bin\LICENSE-MIT.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\windows-x64\bin\LICENSE-LLVM.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\windows-x64\bin\dxcompiler.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.dxc\1.8.2505.10\build\..\binaries\windows-x64\bin\dxc.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffmpeg\7.0.0.9\build\..\binaries\windows-x64\ffmpeg.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Kristian\.nuget\packages\monogame.tool.ffprobe\7.0.0.9\build\..\binaries\windows-x64\ffprobe.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework.Content.Pipeline\MonoGame.Framework.Content.Pipeline.csproj" />
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.DesktopGL.csproj" />
+  </ItemGroup>
+</Project>

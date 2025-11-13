@@ -1,8 +1,7 @@
-﻿namespace ShaderTest.UI
+﻿namespace ShaderTest.UI;
+
+public interface IHasUi
 {
-    public interface IHasUi
-    {
-        string UiSectionName { get; }
-        void RenderUi();
-    }
+    string UiSectionName { get; }
+    void RenderUi();
 }

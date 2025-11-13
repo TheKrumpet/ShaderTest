@@ -1,8 +1,7 @@
-﻿namespace ShaderTest.Updatables
+﻿namespace ShaderTest.Updatables;
+
+public abstract class Updatable(ShaderTestGame game)
 {
-    public abstract class Updatable(ShaderTestGame game)
-    {
-        protected ShaderTestGame Game => game;
-        public abstract void Update(GameTime gameTime);
-    }
+    protected ShaderTestGame Game => game;
+    public abstract void Update(GameTime gameTime);
 }

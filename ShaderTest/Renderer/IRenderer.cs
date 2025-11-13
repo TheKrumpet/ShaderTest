@@ -6,11 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShaderTest.Renderer
+namespace ShaderTest.Renderer;
+
+public interface IRenderer
 {
-    public interface IRenderer
-    {
-        public void Initialise(ContentManager content, GraphicsDevice graphicsDevice);
-        public void Render(GraphicsDevice graphicsDevice, RenderContext renderContext, SpriteBatch spriteBatch, List<ModelEntity> entities);
-    }
+    public void Initialise(ContentManager content, GraphicsDevice graphicsDevice);
+    public void Render(GraphicsDevice graphicsDevice, RenderContext renderContext, SpriteBatch spriteBatch, List<ModelEntity> entities);
 }

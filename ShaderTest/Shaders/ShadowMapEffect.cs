@@ -1,12 +1,11 @@
 ﻿using ShaderTest.Entities;
 
-namespace ShaderTest.Shaders
+namespace ShaderTest.Shaders;
+
+public class ShadowMapEffect(Effect cloneSource) : BaseEffect(cloneSource)
 {
-    public class ShadowMapEffect(Effect cloneSource) : BaseEffect(cloneSource)
+    public override void ApplyRenderContext(Matrix world, RenderContext renderContext, Material material)
     {
-        public override void ApplyRenderContext(Matrix world, RenderContext renderContext, Material material)
-        {
-            Parameters["ModelToLight"].SetValue(world * renderContext.WorldToLight);
-        }
+        Parameters["ModelToLight"].SetValue(world * renderContext.WorldToLight);
     }
 }

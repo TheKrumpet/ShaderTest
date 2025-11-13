@@ -1,0 +1,605 @@
+Content/Models/Campfire/Campfire.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.FbxImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: false
+    defaultEffect: BasicEffect
+    generateMipmaps: false
+    generateTangentFrames: true
+    premultiplyTextureAlpha: false
+    premultiplyVertexColors: false
+    resizeTexturesToPowerOfTwo: false
+    rotationX: 0
+    rotationY: 0
+    rotationZ: 0
+    scale: 1
+    swapWindingOrder: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Campfire/Campfire.fbx: 2025-08-27T08:49:54.3165124Z
+  outputs:
+    Content/Models/Campfire/Campfire.xnb: 2025-11-13T22:36:17.7367461Z
+Content/Models/Car/Car.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.FbxImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: false
+    defaultEffect: BasicEffect
+    generateMipmaps: false
+    generateTangentFrames: true
+    premultiplyTextureAlpha: false
+    premultiplyVertexColors: false
+    resizeTexturesToPowerOfTwo: false
+    rotationX: 0
+    rotationY: 0
+    rotationZ: 0
+    scale: 1
+    swapWindingOrder: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Car/Car.fbx: 2025-08-27T08:49:54.3255235Z
+  outputs:
+    Content/Models/Car/Car.xnb: 2025-11-13T22:39:30.4845197Z
+Content/Models/Ground/Ground.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.FbxImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: false
+    defaultEffect: BasicEffect
+    generateMipmaps: false
+    generateTangentFrames: true
+    premultiplyTextureAlpha: false
+    premultiplyVertexColors: false
+    resizeTexturesToPowerOfTwo: false
+    rotationX: 0
+    rotationY: 0
+    rotationZ: 0
+    scale: 1
+    swapWindingOrder: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Ground/Ground.fbx: 2025-08-27T08:49:54.5311481Z
+  outputs:
+    Content/Models/Ground/Ground.xnb: 2025-11-13T22:39:37.6710085Z
+Content/Models/Skybox/Skybox.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.FbxImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: false
+    defaultEffect: BasicEffect
+    generateMipmaps: false
+    generateTangentFrames: true
+    premultiplyTextureAlpha: false
+    premultiplyVertexColors: false
+    resizeTexturesToPowerOfTwo: false
+    rotationX: 0
+    rotationY: 0
+    rotationZ: 0
+    scale: 1
+    swapWindingOrder: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Skybox/Skybox.fbx: 2025-08-27T08:49:54.5321513Z
+  outputs:
+    Content/Models/Skybox/Skybox.xnb: 2025-11-13T21:06:41.5361082Z
+Content/Models/Tent/Tent.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.FbxImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.ModelProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: false
+    defaultEffect: BasicEffect
+    generateMipmaps: false
+    generateTangentFrames: true
+    premultiplyTextureAlpha: false
+    premultiplyVertexColors: false
+    resizeTexturesToPowerOfTwo: false
+    rotationX: 0
+    rotationY: 0
+    rotationZ: 0
+    scale: 1
+    swapWindingOrder: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Tent/Tent.fbx: 2025-08-27T08:49:54.5346551Z
+  outputs:
+    Content/Models/Tent/Tent.xnb: 2025-11-13T22:36:19.9206072Z
+Content/Shaders/Atmosphere.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Debug
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/Atmosphere.fx: 2025-11-13T22:45:36.2111062Z
+    Shaders/Common.fx: 2025-08-27T08:49:54.5351551Z
+  outputs:
+    Content/Shaders/Atmosphere.xnb: 2025-11-13T22:46:29.3006915Z
+Content/Shaders/Common.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Auto
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/Common.fx: 2025-08-27T08:49:54.5351551Z
+  outputs:
+    Content/Shaders/Common.xnb: 2025-11-13T20:42:46.7857258Z
+Content/Shaders/DeferredBuffer.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Auto
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/DeferredBuffer.fx: 2025-08-27T08:49:54.5351551Z
+    Shaders/Common.fx: 2025-08-27T08:49:54.5351551Z
+  outputs:
+    Content/Shaders/DeferredBuffer.xnb: 2025-11-13T20:42:46.9656180Z
+Content/Shaders/Depth.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Auto
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/Depth.fx: 2025-08-27T08:49:54.5356585Z
+    Shaders/Common.fx: 2025-08-27T08:49:54.5351551Z
+  outputs:
+    Content/Shaders/Depth.xnb: 2025-11-13T20:42:47.0818979Z
+Content/Shaders/PBRCookTorrance.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Auto
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/PBRCookTorrance.fx: 2025-10-25T22:03:05.7693559Z
+    Shaders/ShadowNoisePcf.fx: 2025-08-27T08:49:54.5366584Z
+    Shaders/Common.fx: 2025-08-27T08:49:54.5351551Z
+  outputs:
+    Content/Shaders/PBRCookTorrance.xnb: 2025-11-13T20:42:47.1641062Z
+Content/Shaders/PBRDeferred.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Debug
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/PBRDeferred.fx: 2025-11-13T22:47:15.0439345Z
+    Shaders/PBRCookTorrance.fx: 2025-10-25T22:03:05.7693559Z
+    Shaders/ShadowNoisePcf.fx: 2025-08-27T08:49:54.5366584Z
+    Shaders/Common.fx: 2025-08-27T08:49:54.5351551Z
+  outputs:
+    Content/Shaders/PBRDeferred.xnb: 2025-11-13T22:47:30.3779117Z
+Content/Shaders/PBRTechniques.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Auto
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/PBRTechniques.fx: 2025-10-09T09:22:17.9748020Z
+    Shaders/PBRCookTorrance.fx: 2025-10-25T22:03:05.7693559Z
+    Shaders/ShadowNoisePcf.fx: 2025-08-27T08:49:54.5366584Z
+    Shaders/Common.fx: 2025-08-27T08:49:54.5351551Z
+  outputs:
+    Content/Shaders/PBRTechniques.xnb: 2025-11-13T20:42:47.8378875Z
+Content/Shaders/QuadTest.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Auto
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/QuadTest.fx: 2025-08-27T08:49:54.5361586Z
+  outputs:
+    Content/Shaders/QuadTest.xnb: 2025-11-13T20:42:47.9441340Z
+Content/Shaders/ShadowAdjacentPcf.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Auto
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/ShadowAdjacentPcf.fx: 2025-08-27T08:49:54.5361586Z
+    Shaders/Common.fx: 2025-08-27T08:49:54.5351551Z
+  outputs:
+    Content/Shaders/ShadowAdjacentPcf.xnb: 2025-11-13T20:42:48.0203243Z
+Content/Shaders/ShadowJitteredDiskPcf.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Auto
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/ShadowJitteredDiskPcf.fx: 2025-08-27T08:49:54.5366584Z
+    Shaders/Common.fx: 2025-08-27T08:49:54.5351551Z
+  outputs:
+    Content/Shaders/ShadowJitteredDiskPcf.xnb: 2025-11-13T20:42:48.0989832Z
+Content/Shaders/ShadowNoisePcf.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Auto
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/ShadowNoisePcf.fx: 2025-08-27T08:49:54.5366584Z
+    Shaders/Common.fx: 2025-08-27T08:49:54.5351551Z
+  outputs:
+    Content/Shaders/ShadowNoisePcf.xnb: 2025-11-13T20:42:48.1776318Z
+Content/Shaders/ShadowStratifiedPoisson.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+    debugMode: Auto
+    defines: ''
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Shaders/ShadowStratifiedPoisson.fx: 2025-08-27T08:49:54.5366584Z
+    Shaders/Common.fx: 2025-08-27T08:49:54.5351551Z
+  outputs:
+    Content/Shaders/ShadowStratifiedPoisson.xnb: 2025-11-13T20:42:48.2563054Z
+Content/Arial.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.FontDescriptionImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.FontDescriptionProcessor
+    premultiplyAlpha: true
+    textureFormat: Compressed
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Arial.spritefont: 2025-08-27T08:49:54.3095049Z
+  outputs:
+    Content/Arial.xnb: 2025-11-13T20:42:48.3920409Z
+Content/Models/Campfire/Campfire-Color.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Campfire/Campfire-Color.png: 2025-08-27T08:49:54.3120077Z
+  outputs:
+    Content/Models/Campfire/Campfire-Color.xnb: 2025-11-13T22:39:29.1606266Z
+Content/Models/Car/Car-Color.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Car/Car-Color.png: 2025-08-27T08:49:54.3180123Z
+  outputs:
+    Content/Models/Car/Car-Color.xnb: 2025-11-13T22:39:29.5907364Z
+Content/Models/Car/Car-Normals.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Car/Car-Normals.png: 2025-08-27T08:49:54.3185132Z
+  outputs:
+    Content/Models/Car/Car-Normals.xnb: 2025-11-13T22:39:29.9376652Z
+Content/Models/Car/Car-RMA.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Car/Car-RMA.png: 2025-08-27T08:49:54.3240224Z
+  outputs:
+    Content/Models/Car/Car-RMA.xnb: 2025-11-13T22:39:30.3522860Z
+Content/Models/Car/Tyre-Color.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Car/Tyre-Color.png: 2025-08-27T08:49:54.3260217Z
+  outputs:
+    Content/Models/Car/Tyre-Color.xnb: 2025-11-13T22:39:30.6308425Z
+Content/Models/Ground/Ground-AO.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Ground/Ground-AO.png: 2025-08-27T08:49:54.3725420Z
+  outputs:
+    Content/Models/Ground/Ground-AO.xnb: 2025-11-13T22:39:32.2771098Z
+Content/Models/Ground/Ground-Color.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Ground/Ground-Color.png: 2025-08-27T08:49:54.4440924Z
+  outputs:
+    Content/Models/Ground/Ground-Color.xnb: 2025-11-13T22:39:33.8908773Z
+Content/Models/Ground/Ground-Normals.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Ground/Ground-Normals.png: 2025-08-27T08:49:54.4826140Z
+  outputs:
+    Content/Models/Ground/Ground-Normals.xnb: 2025-11-13T22:39:36.0405383Z
+Content/Models/Ground/Ground-RMA.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Ground/Ground-RMA.png: 2025-08-27T08:49:54.5286485Z
+  outputs:
+    Content/Models/Ground/Ground-RMA.xnb: 2025-11-13T22:39:37.5678302Z
+Content/Models/Shared/Shared-Color.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Shared/Shared-Color.png: 2025-08-27T08:49:54.5316486Z
+  outputs:
+    Content/Models/Shared/Shared-Color.xnb: 2025-11-13T22:39:37.6835253Z
+Content/Models/Shared/Shared-Normals.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Shared/Shared-Normals.png: 2025-08-27T08:49:54.5316486Z
+  outputs:
+    Content/Models/Shared/Shared-Normals.xnb: 2025-11-13T22:39:37.6955386Z
+Content/Models/Shared/Shared-RMA.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Shared/Shared-RMA.png: 2025-08-27T08:49:54.5321513Z
+  outputs:
+    Content/Models/Shared/Shared-RMA.xnb: 2025-11-13T22:39:37.7060484Z
+Content/Models/Tent/Tent-Color.xnb:
+  contentRoot: Content
+  shouldBuild: true
+  importer: !Microsoft.Xna.Framework.Content.Pipeline.TextureImporter
+    version: 3.8.3.1
+  processor: !Microsoft.Xna.Framework.Content.Pipeline.Processors.TextureProcessor
+    colorKeyColor: 255,0,255,255
+    colorKeyEnabled: true
+    generateMipmaps: false
+    premultiplyAlpha: true
+    resizeToPowerOfTwo: false
+    makeSquare: false
+    textureFormat: Color
+    version: 3.8.3.1
+  compressContent: false
+  graphicsProfile: HiDef
+  dependencies:
+    Models/Tent/Tent-Color.png: 2025-08-27T08:49:54.5341543Z
+  outputs:
+    Content/Models/Tent/Tent-Color.xnb: 2025-11-13T22:39:37.8287360Z

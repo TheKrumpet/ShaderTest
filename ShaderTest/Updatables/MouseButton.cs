@@ -1,9 +1,8 @@
-﻿namespace ShaderTest.Updatables
+﻿namespace ShaderTest.Updatables;
+
+public enum MouseButton
 {
-    public enum MouseButton
-    {
-        Left,
-        Right,
-        Middle
-    }
+    Left,
+    Right,
+    Middle
 }

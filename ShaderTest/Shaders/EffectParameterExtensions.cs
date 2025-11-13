@@ -1,19 +1,18 @@
-﻿namespace ShaderTest.Shaders
+﻿namespace ShaderTest.Shaders;
+
+public static class EffectParameterExtensions
 {
-    public static class EffectParameterExtensions
+    public static Color GetValueColor3(this EffectParameter effectParameter)
     {
-        public static Color GetValueColor3(this EffectParameter effectParameter)
-        {
-            var value = effectParameter.GetValueVector3();
+        var value = effectParameter.GetValueVector3();
 
-            return new Color(value.X, value.Y, value.Z);
-        }
+        return new Color(value.X, value.Y, value.Z);
+    }
 
-        public static Color GetValueColor4(this EffectParameter effectParameter)
-        {
-            var value = effectParameter.GetValueVector4();
+    public static Color GetValueColor4(this EffectParameter effectParameter)
+    {
+        var value = effectParameter.GetValueVector4();
 
-            return new Color(value.X, value.Y, value.Z, value.W);
-        }
+        return new Color(value.X, value.Y, value.Z, value.W);
     }
 }

@@ -1,63 +1,50 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="ContentOverrides.targets" />
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <RollForward>Major</RollForward>
-    <PublishReadyToRun>false</PublishReadyToRun>
-    <TieredCompilation>false</TieredCompilation>
-    <MonoGamePlatform>DesktopVK</MonoGamePlatform>
-    <Platforms>AnyCPU;x64</Platforms>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-    <ApplicationIcon>Icon.ico</ApplicationIcon>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Remove="Content\bin\**" />
-    <Compile Remove="Content\obj\**" />
-    <EmbeddedResource Remove="Content\bin\**" />
-    <EmbeddedResource Remove="Content\obj\**" />
-    <None Remove="Content\bin\**" />
-    <None Remove="Content\obj\**" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Content\Content.mgcb" />
-    <None Remove="Icon.ico" />
-    <None Remove="Icon.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Icon.ico" />
-    <EmbeddedResource Include="Icon.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="AutoPipeline" Version="0.0.2" />
-    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.4-preview.7" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\Models\Shared\" />
-    <Folder Include="Content\Models\Tent\" />
-  </ItemGroup>
-  <ItemGroup>
-    <MonoGameContentReference Include="Content\Content.mgcb" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\MonoGame\Artifacts\monogame.native\windows\desktopvk\Debug\monogame.native.dll" Link="monogame.native.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\MonoGame\Artifacts\monogame.native\windows\desktopvk\Debug\monogame.native.pdb" Link="monogame.native.pdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\McFace.MonoGame\McFace.MonoGame.ImGui\McFace.MonoGame.ImGuiNET.csproj" />
-    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Native.csproj" />
-    <ProjectReference Include="..\..\MonoGame\native\monogame\desktopvk.vcxproj">
-      <Private>True</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
-    <Message Text="Restoring dotnet tools" Importance="High" />
-    <Exec Command="dotnet tool restore" />
-  </Target>
+	<Import Project="ContentOverrides.targets" />
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<RollForward>Major</RollForward>
+		<PublishReadyToRun>false</PublishReadyToRun>
+		<TieredCompilation>false</TieredCompilation>
+		<MonoGamePlatform>DesktopVK</MonoGamePlatform>
+		<Platforms>AnyCPU;x64</Platforms>
+	</PropertyGroup>
+	<PropertyGroup>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<ApplicationIcon>Icon.ico</ApplicationIcon>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Icon.ico" />
+		<None Remove="Icon.bmp" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Icon.ico" />
+		<EmbeddedResource Include="Icon.bmp" />
+	</ItemGroup>
+	<ItemGroup>
+		<MonoGameContentReference Include="Content\Content.mgcb" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\MonoGame\Artifacts\monogame.native\windows\desktopvk\Debug\monogame.native.dll" Link="monogame.native.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="..\..\MonoGame\Artifacts\monogame.native\windows\desktopvk\Debug\monogame.native.pdb" Link="monogame.native.pdb">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\McFace.MonoGame\McFace.MonoGame.ImGuiNET\McFace.MonoGame.ImGuiNET.csproj" />
+		<ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Native.csproj" />
+		<ProjectReference Include="..\..\MonoGame\native\monogame\desktopvk.vcxproj">
+			<Private>True</Private>
+		</ProjectReference>
+	</ItemGroup>
+	<Target Name="BuildContent" BeforeTargets="Build">
+		<PropertyGroup>
+			<ContentOutput>$(ProjectDir)$(OutputPath)</ContentOutput>
+			<ContentTemp>$(ProjectDir)$(IntermiediateOutputPath)</ContentTemp>
+			<ContentArgs>build -p $(MonoGamePlatform) -o $(ContentOutput) -i $(ContentTemp)</ContentArgs>
+		</PropertyGroup>
+		<MSBuild Projects="..\ShaderTest.Content\ShaderTest.Content.csproj" Targets="Build;Run" Properties="RunArguments=$(ContentArgs);" />
+	</Target>
 </Project>

@@ -3,28 +3,28 @@
   "isRoot": true,
   "tools": {
     "dotnet-mgcb": {
-      "version": "3.8.4-preview.6.1-develop",
+      "version": "3.8.4.1-develop",
       "commands": [
         "mgcb"
       ],
       "rollForward": false
     },
     "dotnet-mgcb-editor": {
-      "version": "3.8.4-preview.6.1-develop",
+      "version": "3.8.4.1-develop",
       "commands": [
         "mgcb-editor"
       ],
       "rollForward": false
     },
     "dotnet-mgcb-editor-windows": {
-      "version": "3.8.4-preview.6.1-develop",
+      "version": "3.8.4.1-develop",
       "commands": [
         "mgcb-editor-windows"
       ],
       "rollForward": false
     },
     "dotnet-mgfxc": {
-      "version": "3.8.4-preview.6.1-develop",
+      "version": "3.8.4.1-develop",
       "commands": [
         "mgfxc"
       ],

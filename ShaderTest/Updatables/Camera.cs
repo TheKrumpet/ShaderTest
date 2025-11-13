@@ -2,87 +2,86 @@
 using ShaderTest.Shaders;
 using ShaderTest.UI;
 
-namespace ShaderTest.Updatables
+namespace ShaderTest.Updatables;
+
+public class Camera : Updatable, IHasUi
 {
-    public class Camera : Updatable, IHasUi
+    private readonly float _cameraSpeed = 5.0f;
+    private float _gamma = 2.2f;
+    private float _exposure = 1.0f;
+    private float _fov = 60f;
+    private Vector3 _cameraDir;
+
+    public Matrix View { get; private set; }
+    public Matrix Projection { get; private set; }
+    public Vector3 Position { get; private set; }
+    public float Gamma => _gamma;
+    public float Exposure => _exposure;
+    public string UiSectionName => "Camera";
+    public float NearClip => 0.1f;
+    public float FarClip => 200f;
+
+    public Camera(ShaderTestGame game) : base(game)
     {
-        private readonly float _cameraSpeed = 5.0f;
-        private float _gamma = 2.2f;
-        private float _exposure = 1.0f;
-        private float _fov = 60f;
-        private Vector3 _cameraDir;
+        View = Matrix.Identity;
+        Projection = Matrix.Identity;
 
-        public Matrix View { get; private set; }
-        public Matrix Projection { get; private set; }
-        public Vector3 Position { get; private set; }
-        public float Gamma => _gamma;
-        public float Exposure => _exposure;
-        public string UiSectionName => "Camera";
-        public float NearClip => 0.1f;
-        public float FarClip => 200f;
+        Position = new Vector3(10);
+        _cameraDir = Vector3.Normalize(-Position);
+    }
 
-        public Camera(ShaderTestGame game) : base(game)
+    public override void Update(GameTime gameTime)
+    {
+        var currentKb = Keyboard.GetState();
+
+        if (Game.IsActive)
         {
-            View = Matrix.Identity;
-            Projection = Matrix.Identity;
+            var cameraLeft = Vector3.Normalize(Vector3.Cross(Vector3.Up, _cameraDir));
+            Game.Mouse.LockMouse = false;
 
-            Position = new Vector3(10);
-            _cameraDir = Vector3.Normalize(-Position);
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-            var currentKb = Keyboard.GetState();
-
-            if (Game.IsActive)
+            if (currentKb.IsKeyDown(Keys.LeftAlt) && Game.Mouse.InScreenBounds)
             {
-                var cameraLeft = Vector3.Normalize(Vector3.Cross(Vector3.Up, _cameraDir));
-                Game.Mouse.LockMouse = false;
+                var moveScaled = Game.Mouse.Move * 0.005f;
+                //Game.Mouse.LockMouse = true;
+                var rotate = Quaternion.CreateFromAxisAngle(Vector3.Up, -moveScaled.X)
+                    * Quaternion.CreateFromAxisAngle(cameraLeft, moveScaled.Y);
 
-                if (currentKb.IsKeyDown(Keys.LeftAlt) && Game.Mouse.InScreenBounds)
-                {
-                    var moveScaled = Game.Mouse.Move * 0.005f;
-                    //Game.Mouse.LockMouse = true;
-                    var rotate = Quaternion.CreateFromAxisAngle(Vector3.Up, -moveScaled.X)
-                        * Quaternion.CreateFromAxisAngle(cameraLeft, moveScaled.Y);
+                _cameraDir = Vector3.Transform(_cameraDir, rotate);
 
-                    _cameraDir = Vector3.Transform(_cameraDir, rotate);
-
-                    Game.IsMouseVisible = false;
-                }
-
-                var appliedSpeed = _cameraSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-                if (currentKb.IsKeyDown(Keys.W))
-                {
-                    Position += (_cameraDir * appliedSpeed);
-                }
-
-                if (currentKb.IsKeyDown(Keys.S))
-                {
-                    Position -= (_cameraDir * appliedSpeed);
-                }
-
-                if (currentKb.IsKeyDown(Keys.A))
-                {
-                    Position += (cameraLeft * appliedSpeed);
-                }
-
-                if (currentKb.IsKeyDown(Keys.D))
-                {
-                    Position -= (cameraLeft * appliedSpeed);
-                }
+                Game.IsMouseVisible = false;
             }
 
-            View = Matrix.CreateLookAt(Position, Position + _cameraDir, Vector3.Up);
-            Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(_fov), Game.GraphicsDevice.Viewport.AspectRatio, NearClip, FarClip);
+            var appliedSpeed = _cameraSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (currentKb.IsKeyDown(Keys.W))
+            {
+                Position += (_cameraDir * appliedSpeed);
+            }
+
+            if (currentKb.IsKeyDown(Keys.S))
+            {
+                Position -= (_cameraDir * appliedSpeed);
+            }
+
+            if (currentKb.IsKeyDown(Keys.A))
+            {
+                Position += (cameraLeft * appliedSpeed);
+            }
+
+            if (currentKb.IsKeyDown(Keys.D))
+            {
+                Position -= (cameraLeft * appliedSpeed);
+            }
         }
 
-        public void RenderUi()
-        {
-            ImGui.SliderFloat("Field of view", ref _fov, 10f, 120f);
-            ImGui.SliderFloat("Gamma", ref _gamma, 1.0f, 5.0f);
-            ImGui.SliderFloat("Exposure", ref _exposure, 0.1f, 10f);
-        }
+        View = Matrix.CreateLookAt(Position, Position + _cameraDir, Vector3.Up);
+        Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(_fov), Game.GraphicsDevice.Viewport.AspectRatio, NearClip, FarClip);
+    }
+
+    public void RenderUi()
+    {
+        ImGui.SliderFloat("Field of view", ref _fov, 10f, 120f);
+        ImGui.SliderFloat("Gamma", ref _gamma, 1.0f, 5.0f);
+        ImGui.SliderFloat("Exposure", ref _exposure, 0.1f, 10f);
     }
 }

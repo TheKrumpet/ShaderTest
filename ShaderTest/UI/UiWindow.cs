@@ -1,62 +1,61 @@
 ﻿using ImGuiNET;
 using McFace.MonoGame.ImGuiNET;
 
-namespace ShaderTest.UI
+namespace ShaderTest.UI;
+
+public class UiWindow
 {
-    public class UiWindow
+    public ImGuiRenderer Renderer { get; init; }
+    private Dictionary<string, List<IHasUi>> _tabs = [];
+    private string _current;
+
+    public UiWindow(Game game)
     {
-        public ImGuiRenderer Renderer { get; init; }
-        private Dictionary<string, List<IHasUi>> _tabs = [];
-        private string _current;
+        Renderer = new(game);
+        Renderer.RebuildFontAtlas();
+    }
 
-        public UiWindow(Game game)
+    public void AddToTab(string tab, IHasUi ui)
+    {
+        if (!_tabs.TryGetValue(tab, out List<IHasUi> sections))
         {
-            Renderer = new(game);
-            Renderer.RebuildFontAtlas();
+            sections = [];
+            _tabs.Add(tab, sections);
         }
 
-        public void AddToTab(string tab, IHasUi ui)
-        {
-            if (!_tabs.TryGetValue(tab, out List<IHasUi> sections))
-            {
-                sections = [];
-                _tabs.Add(tab, sections);
-            }
+        sections.Add(ui);
+        _current ??= tab;
+    }
 
-            sections.Add(ui);
-            _current ??= tab;
+    public void RenderUi(GameTime gameTime)
+    {
+        Renderer.BeforeLayout(gameTime);
+
+        ImGui.Begin("Debug");
+
+        ImGui.BeginTabBar(_current);
+        foreach (var (tab, _) in _tabs)
+        {
+            var flags = _current == tab ? ImGuiTabItemFlags.SetSelected : ImGuiTabItemFlags.None;
+            if (ImGui.TabItemButton(tab, flags))
+            {
+                _current = tab;
+            }
+        }
+        ImGui.EndTabBar();
+
+        var sections = _tabs[_current];
+
+        foreach (var section in sections)
+        {
+            if (ImGui.CollapsingHeader(section.UiSectionName))
+            {
+                section.RenderUi();
+            }
         }
 
-        public void RenderUi(GameTime gameTime)
-        {
-            Renderer.BeforeLayout(gameTime);
+        ImGui.End();
 
-            ImGui.Begin("Debug");
-
-            ImGui.BeginTabBar(_current);
-            foreach (var (tab, _) in _tabs)
-            {
-                var flags = _current == tab ? ImGuiTabItemFlags.SetSelected : ImGuiTabItemFlags.None;
-                if (ImGui.TabItemButton(tab, flags))
-                {
-                    _current = tab;
-                }
-            }
-            ImGui.EndTabBar();
-
-            var sections = _tabs[_current];
-
-            foreach (var section in sections)
-            {
-                if (ImGui.CollapsingHeader(section.UiSectionName))
-                {
-                    section.RenderUi();
-                }
-            }
-
-            ImGui.End();
-
-            Renderer.AfterLayout();
-        }
+        Renderer.AfterLayout();
     }
 }

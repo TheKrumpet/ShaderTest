@@ -1,32 +1,31 @@
 ﻿using ImGuiNET;
 using McFace.MonoGame.ImGuiNET;
 
-namespace ShaderTest.UI
+namespace ShaderTest.UI;
+
+public class TextureView(ImGuiRenderer renderer) : IHasUi
 {
-    public class TextureView(ImGuiRenderer renderer) : IHasUi
+    private static readonly Dictionary<Texture2D, nint> _refCache = [];
+    private Texture2D _selectedTexture;
+
+    public string UiSectionName => "Textures";
+
+    public void RenderUi()
     {
-        private static readonly Dictionary<Texture2D, nint> _refCache = [];
-        private Texture2D _selectedTexture;
+        _selectedTexture = McFaceImGui.TextureCombo("Texture", _selectedTexture);
 
-        public string UiSectionName => "Textures";
+        if (_selectedTexture == null) return;
 
-        public void RenderUi()
+        if (!_refCache.TryGetValue(_selectedTexture, out nint textureRef))
         {
-            _selectedTexture = McFaceImGui.TextureCombo("Texture", _selectedTexture);
-
-            if (_selectedTexture == null) return;
-
-            if (!_refCache.TryGetValue(_selectedTexture, out nint textureRef))
-            {
-                textureRef = renderer.BindTexture(_selectedTexture);
-                _refCache.Add(_selectedTexture, textureRef);
-            }
-
-            var longestDimension = MathF.Max(_selectedTexture.Width, _selectedTexture.Height);
-            var scale = 400f / longestDimension;
-            var size = new System.Numerics.Vector2(_selectedTexture.Width, _selectedTexture.Height);
-
-            ImGui.Image(textureRef, size * scale);
+            textureRef = renderer.BindTexture(_selectedTexture);
+            _refCache.Add(_selectedTexture, textureRef);
         }
+
+        var longestDimension = MathF.Max(_selectedTexture.Width, _selectedTexture.Height);
+        var scale = 400f / longestDimension;
+        var size = new System.Numerics.Vector2(_selectedTexture.Width, _selectedTexture.Height);
+
+        ImGui.Image(textureRef, size * scale);
     }
 }

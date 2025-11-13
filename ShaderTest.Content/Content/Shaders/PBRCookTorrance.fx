@@ -21,7 +21,7 @@ float3 fresnelSchlick(float viewDotHalf, float3 f0)
 */
 float distributionGGX(float normalDotHalf, float roughness)
 {
-    float a2 = roughness * roughness * roughness * roughness;    
+    float a2 = roughness * roughness * roughness * roughness;
     float denom = normalDotHalf * normalDotHalf * (a2 - 1.0f) + 1.0f;
     denom = Pi * denom * denom;
     
